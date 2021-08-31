@@ -7,5 +7,7 @@ $dbname = "medaase";
 
 if (!$con = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname))
 {
-    die("Failed to connect to database");
+    die("<script>alert('Connection Failed.')</script>");
 }
+
+?>
