@@ -69,8 +69,5 @@
 
             </div>
             <?php include("./includes/footer.php") ?>
-            
-    <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
-    <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
 </body>
 </html>
