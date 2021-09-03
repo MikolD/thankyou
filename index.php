@@ -55,22 +55,37 @@
                         <div class="widget widget-content-area br-4">
                             <div class="widget-one">
 
-                                <h6>Kick Start you new project with ease!</h6>
+                                <h6>Thankyou is all it takes</h6>
 
-                                <p class="mb-0 mt-3" style="color: #888ea8;">With CORK starter kit, you can begin your work without any hassle. The starter page is highly optimized which gives you freedom to start with minimal code and add only the desired components and plugins required for your project.</p>
+                                <p class="mb-0 mt-3" style="color: #888ea8;">Rewards are given  to be motivated. Show apprecition in any way you can</p>
 
                             </div>
                         </div>
                     </div>
-    
+                    <div class="user-profile layout-spacing">
+                            <div class="widget-content widget-content-area">
+                                <div class="d-flex justify-content-between">
+                                    <h3 class=""></h3>
+                                    <a href="user_account_setting.html" class="mt-2 edit-profile"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-3"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg></a>
+                                </div>
+                                <div class="text-center user-info">
+                                    <img src="assets/img/90x90.jpg" alt="avatar">
+                                    <p class=""></p>
+                                </div>
+                                <div class="user-info-list">
+
+                                    <div class="">
+                                     
+                                    </div>                                    
+                                </div>
+                            </div>
+                        </div>
 
 
                 </div>
-
             </div>
+            <a href="user_profile.html">login</a>
+            <a href="auth_login.php">login</a>
             <?php include("./includes/footer.php") ?>
-            
-    <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
-    <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
 </body>
 </html>

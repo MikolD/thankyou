@@ -31,7 +31,7 @@
                                 <a href="view_receivers.php"> Manage Receivers </a>
                             </li>
                             <li>
-                                <a href="#sm2" data-toggle="collapse" aria-expanded="false" > New Receiver <polyline points="9 18 15 12 9 6"></polyline></svg> </a>
+                                <a href="new_recievers.php"> New Receiver </a>
                                 
                             </li>
                         </ul>
@@ -51,7 +51,7 @@
                                 <a href="view_givers.php"> Manage Givers </a>
                             </li>
                             <li>
-                                <a href="#sm2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"> New Giver <polyline points="9 18 15 12 9 6"></polyline></svg> </a>
+                                <a href="new_giver.php"> New Giver</a>
                                 
                             </li>
                         </ul>
