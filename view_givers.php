@@ -63,7 +63,7 @@
                         </div>
 
                         <div class="widget-content widget-content-area br-6">
-                            <table id="html5-extension" class="table table-hover non-hover" style="width:100%">
+                        <table id="html5-extension" class="table table-hover non-hover" style="width:100%">
                                 <thead>
                                     <tr>
                                         <th>Name</th>
