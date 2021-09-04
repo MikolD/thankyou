@@ -81,40 +81,41 @@ include("./includes/dbconn.php")
 </div><br>
 
     <form method="POST" action="submit" onSubmit="return validateform()">
-      <div class="wrapper col4">
-  <div class="container" style="width:85%">
-    <table  class="table table">
-      <tbody>
-        <tr>
-          <td width="34%">ID</td>
-          <td><input type="text" name="id" id="id"/></td>
-        </tr>
+<div class="wrapper col4">
+    <div class="container" style="width:50%; margin-left: 72px;" >
+        <table  class="table">
+           <tbody>
+             <tr>
+                <td>ID</td>
+                <td><input type="text" style="width: 350px;" name="id" id="id"/></td>
+             </tr>
 
         <tr>
           <td>Email</td>
-          <td><input type="text" name="email" id="email" /></td>
+          <td><input type="text" style="width: 350px;" name="email" id="email" /></td>
         </tr>
 
         <tr>
           <td>Phone</td>
-          <td><input type="text" name="phone" id="phone"/></td>
-        </tr>
-       
-
-         <tr>
-          <td>Date</td>
-          <td><input type="date" name="date" id="date" /></td>
+          <td><input type="text" style="width: 350px;" name="phone" id="phone"/></td>
         </tr>
 
          <tr>
           <td>Password</td>
-          <td><input type="password" name="password" id="password"/></td>
+          <td><input type="password" style="width: 350px;" name="password" id="password"/></td>
         </tr>
 
          <tr>
           <td>Country</td>
-          <td><input type="text" name="country" id="country" /></td>
+          <td><input type="text" style="width: 350px;" name="country" id="country" /></td>
         </tr>
+
+        <tr>
+          <td>Date</td>
+          <td><input type="date" name="date" id="date" /></td>
+        </tr> 
+
+
         <tr>
           <td>Image</td>
           <td><input type="file" name="image" id="image" /></td>

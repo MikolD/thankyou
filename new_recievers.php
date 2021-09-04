@@ -1,6 +1,26 @@
-<?php 
 
-include("./includes/dbconn.php")
+<?php
+session_start();
+include("dbconn.php");
+
+if(isset($_POST[submit]))
+  {
+  $sql ="INSERT INTO receivers(id,name,gender,workID,placeofWork,email,phone,image,department,branch)
+   values('$_POST[id]','$_POST[name]','$_POST[gender]','$_POST[workID]','$_POST[placeofWork]','$_POST[email]','$_POST[phone]','$_POST[image]',$_POST[department]')";
+
+  if($qsql = mysqli_query($con,$sql))
+  {
+    echo "<script>alert('reciever record inserted successfully...');</script>";
+    echo "<script>window.location='view_recievers.php';</script>";  
+    $insid= mysqli_insert_id($con);
+    
+  }
+  else
+  {
+    echo mysqli_error($con);
+  }
+}
+
 ?>
 
 
@@ -80,25 +100,62 @@ include("./includes/dbconn.php")
 
 </div><br>
 
-    <form method="POST" action="submit" onSubmit="return validateform()">
+<form method="post" action="submit" name="frmreceivers" onSubmit="return validateform()">
       <div class="wrapper col4">
-  <div class="container" style="width:85%">
+      <div class="container" style="width:70%; margin-left: 72px;" >
     <table  class="table table">
       <tbody>
         <tr>
           <td width="34%">ID</td>
-          <td><input type="text" name="id" id="id"/></td>
+          <td><input type="text"  style="width: 400px;" name="id" id="id"/></td>
         </tr>
 
         <tr>
           <td>Name</td>
-          <td><input type="text" name="Name" id="Name" /></td>
+          <td><input type="text"  style="width: 400px;" name="Name" id="Name" /></td>
+        </tr>
+
+         <tr>
+          <td>Work-Id</td>
+          <td><input type="text"  style="width: 400px;" name="workId" id="workId" /></td>
+        </tr>
+
+         <tr>
+          <td>Work Place</td>
+          <td><input type="placeofWork"  style="width: 400px;" name="placeofWork" id="placeofWork"/></td>
+        </tr>
+
+         <tr>
+          <td>Email</td>
+          <td><input type="text"  style="width: 400px;" name="Email" id="Email" /></td>
+        </tr>
+        <tr>
+          <td>Phone</td>
+          <td><input type="text"   style="width: 400px;" name="phone" id="phone" /></td>
+        </tr>
+        <tr>
+          <td>Address</td>
+          <td><input type="text"  style="width: 400px;" name="address" id="address" /></td>
+        </tr>
+
+        <tr>
+          <td>Department</td>
+          <td><input type="text"  style="width: 400px;" name="Department" id="Department" /></td>
+        </tr>
+        <tr>
+          <td>Branch</td>
+          <td><input type="text"  style="width: 400px;" name="branch" id="branch" /></td>
+        </tr>
+
+        <tr>
+          <td>Image</td>
+          <td><input type="file"  style="width: 400px;" name="image" id="image" /></td>
         </tr>
 
         <tr>
           <td>Gender</td>
           <td><select name="select3" id="select3">
-           <option value="">Select</option>
+           <option value="" >Select</option>
           <?php
       $arr = array("Male","Female");
       foreach($arr as $val)
@@ -115,42 +172,6 @@ include("./includes/dbconn.php")
       ?>
           </select></td>
         </tr>
-
-         <tr>
-          <td>Work-Id</td>
-          <td><input type="text" name="workId" id="workId" /></td>
-        </tr>
-
-         <tr>
-          <td>Work Place</td>
-          <td><input type="placeofWork" name="placeofWork" id="placeofWork"/></td>
-        </tr>
-
-         <tr>
-          <td>Email</td>
-          <td><input type="text" name="Email" id="Email" /></td>
-        </tr>
-        <tr>
-          <td>Phone</td>
-          <td><input type="text" name="phone" id="phone" /></td>
-        </tr>
-        <tr>
-          <td>Address</td>
-          <td><input type="text" name="address" id="address" /></td>
-        </tr>
-        <tr>
-          <td>Image</td>
-          <td><input type="file" name="image" id="image" /></td>
-        </tr>
-        <tr>
-          <td>Department</td>
-          <td><input type="text" name="Department" id="Department" /></td>
-        </tr>
-        <tr>
-          <td>Branch</td>
-          <td><input type="text" name="branch" id="branch" /></td>
-        </tr>
-
 
         <tr>
           <td colspan="2" align="center"><input type="submit" name="givers" id="submit" value="Enter" /></td>
