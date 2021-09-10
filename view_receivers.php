@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
-    <title>Dashboard | Medaase </title>
+    <title>Manage Receivers | Medaase </title>
     
 
     <?php include("./includes/header.php") ?>
@@ -72,10 +72,10 @@
                                         <th>Email</th>
                                         <th>Phone</th>
                                         <th>Address</th>
-                                        <th>Image</th>
+                                    
                                         <th>Department</th>
                                         <th>Branch</th>
-                                        <th>Avator</th>
+                                        <th>Avatar</th>
                                         <th class="dt-no-sorting">Action</th>
                                     </tr>
                                 </thead>
@@ -89,7 +89,7 @@
                                         <td>$320,800</td>
                                         <td>5421</td>
                                         <td>5421</td>
-                                        <td>5421</td>
+                                        
                                         <td>5421</td>
                                         <td>5421</td>
                                         <td>
@@ -124,7 +124,7 @@
                                         <td>$170,750</td>
                                         <td>8422</td>
                                         <td>8422</td>
-                                        <td>8422</td>
+                                        
                                         <td>8422</td>
                                         <td>8422</td>
                                         <td>
@@ -159,7 +159,7 @@
                                         <td>$86,000</td>
                                         <td>1562</td>
                                         <td>8422</td>
-                                        <td>8422</td>
+                                        
                                         <td>8422</td>
                                         <td>8422</td>
                                         <td>
@@ -194,7 +194,7 @@
                                         <td>$433,060</td>
                                         <td>6224</td>
                                         <td>8422</td>
-                                        <td>8422</td>
+                                        
                                         <td>8422</td>
                                         <td>8422</td>
                                         <td>
@@ -229,7 +229,7 @@
                                         <td>$162,700</td>
                                         <td>5407</td>
                                         <td>8422</td>
-                                        <td>8422</td>
+                                        
                                         <td>8422</td>
                                         <td>8422</td>
                                         <td>
@@ -264,7 +264,7 @@
                                         <td>$372,000</td>
                                         <td>4804</td>
                                         <td>8422</td>
-                                        <td>8422</td>
+                                        
                                         <td>8422</td>
                                         <td>8422</td>
                                         <td>
