@@ -71,21 +71,21 @@ include("./includes/dbconn.php")
     <!-- <form method="POST" action="submit" onSubmit="return validateform()"> -->
     <div class="widget-content widget-content-area">
                                     <form method="POST" action="submit">
-                                        <div class="form-group mb-4">
+                                    <div class="form-group mb-4">
                                             <label for="formGroupExampleInput">Full Name</label>
-                                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+                                            <input name="fullName" type="text" class="form-control" id="formGroupExampleInput" placeholder="Your Full Name">
                                         </div>
                                         <div class="form-group mb-4">
                                             <label for="formGroupExampleInput">Email Address</label>
-                                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+                                            <input name="email" type="text" class="form-control" id="formGroupExampleInput" placeholder="Your Email Address">
                                         </div>
                                         <div class="form-group mb-4">
                                             <label for="formGroupExampleInput">Phone Number</label>
-                                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+                                            <input name="phoneNumber" type="text" class="form-control" id="formGroupExampleInput" placeholder="Your Phone Number">
                                         </div>
                                         <div class="form-group mb-4">
                                             <label for="formGroupExampleInput">Password</label>
-                                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+                                            <input name="password" type="text" class="form-control" id="formGroupExampleInput" placeholder="Your Password">
                                         </div>
                                         <div class="form-group mb-4">
                                             <label for="formGroupExampleInput">Nationality</label>

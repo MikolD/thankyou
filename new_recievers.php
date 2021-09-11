@@ -3,7 +3,7 @@
 session_start();
 include("dbconn.php");
 
-if(isset($_POST[submit]))
+if(isset($_POST["email"]) && isset($_POST["password"]))
   {
   $sql ="INSERT INTO receivers(id,name,gender,workID,placeofWork,email,phone,image,department,branch)
    values('$_POST[id]','$_POST[name]','$_POST[gender]','$_POST[workID]','$_POST[placeofWork]','$_POST[email]','$_POST[phone]','$_POST[image]',$_POST[department]')";
@@ -84,21 +84,21 @@ if(isset($_POST[submit]))
     </div>  
     <div class="widget-content widget-content-area">
                                     <form method="POST" action="submit">
-                                        <div class="form-group mb-4">
+                                    <div class="form-group mb-4">
                                             <label for="formGroupExampleInput">Full Name</label>
-                                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+                                            <input name="fullName" type="text" class="form-control" id="formGroupExampleInput" placeholder="Your Full Name">
                                         </div>
                                         <div class="form-group mb-4">
                                             <label for="formGroupExampleInput">Email Address</label>
-                                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+                                            <input name="email" type="text" class="form-control" id="formGroupExampleInput" placeholder="Your Email Address">
                                         </div>
                                         <div class="form-group mb-4">
                                             <label for="formGroupExampleInput">Phone Number</label>
-                                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+                                            <input name="phoneNumber" type="text" class="form-control" id="formGroupExampleInput" placeholder="Your Phone Number">
                                         </div>
                                         <div class="form-group mb-4">
                                             <label for="formGroupExampleInput">Password</label>
-                                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+                                            <input name="password" type="text" class="form-control" id="formGroupExampleInput" placeholder="Your Password">
                                         </div>
                                         <div class="form-group mb-4">
                                             <label for="formGroupExampleInput">Nationality</label>
