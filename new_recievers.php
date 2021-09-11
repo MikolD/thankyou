@@ -1,17 +1,21 @@
 <?php
 session_start();
-include("dbconn.php");
 
-if (isset($_POST["email"]) && isset($_POST["password"])) {
-    $sql = "INSERT INTO receivers(id,name,gender,workID,placeofWork,email,phone,image,department,branch)
-   values('$_POST[id]','$_POST[name]','$_POST[gender]','$_POST[workID]','$_POST[placeofWork]','$_POST[email]','$_POST[phone]','$_POST[image]',$_POST[department]')";
 
-    if ($qsql = mysqli_query($con, $sql)) {
+
+include("./includes/dbconn.php");
+
+
+if (isset($_POST["addgiver"])) {
+    $addgiverquery = "INSERT INTO receivers(email,name,gender,phone,department,workID,placeofWork,branch) values('$_POST[email]','$_POST[fullName]','$_POST[gender]','$_POST[phoneNumber]','$_POST[department]','$_POST[workid]','$_POST[placeofwork]','$_POST[branch]')";
+    $error = mysqli_query($con, $addgiverquery);
+    if ($error) {
         echo "<script>alert('reciever record inserted successfully...');</script>";
-        echo "<script>window.location='view_recievers.php';</script>";
-        $insid = mysqli_insert_id($con);
+        echo "<script>window.location.href("/");</script>";
     } else {
-        echo mysqli_error($con);
+        echo "<script>alert(\"" .   $error  . "\")</script>";
+         echo "<script>alert(\"" .   mysqli_error($con)  . "\")</script>";
+        // echo mysqli_error($con);
     }
 }
 
@@ -74,7 +78,7 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
         <!-- SIDENAV BEGINS HERE -->
         <?php include("./includes/sidenav.php") ?>
         <!-- SIDENAV ENDS HERE -->
-
+      
         <!--  BEGIN CONTENT PART  -->
         <div id="content" class="main-content">
             <div class="layout-px-spacing">
@@ -83,29 +87,45 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
                     <h2>New Receiver</h2>
                 </div>
                 <div class="widget-content widget-content-area">
-                    <form method="POST" action="submit">
+                    <form method="POST" action="new_recievers.php">
                         <div class="form-group mb-4">
                             <label for="formGroupExampleInput">Full Name</label>
                             <input name="fullName" type="text" class="form-control" id="formGroupExampleInput" placeholder="Your Full Name">
                         </div>
                         <div class="form-group mb-4">
                             <label for="formGroupExampleInput">Email Address</label>
-                            <input name="email" type="text" class="form-control" id="formGroupExampleInput" placeholder="Your Email Address">
+                            <input name="email" required type="text" class="form-control" id="formGroupExampleInput" placeholder="Your Email Address">
                         </div>
                         <div class="form-group mb-4">
                             <label for="formGroupExampleInput">Phone Number</label>
                             <input name="phoneNumber" type="text" class="form-control" id="formGroupExampleInput" placeholder="Your Phone Number">
                         </div>
                         <div class="form-group mb-4">
-                            <label for="formGroupExampleInput">Password</label>
-                            <input name="password" type="text" class="form-control" id="formGroupExampleInput" placeholder="Your Password">
+                            <label for="formGroupExampleInput">Work ID</label>
+                            <input required name="workid" type="text" class="form-control" id="formGroupExampleInput" placeholder="Work ID">
                         </div>
                         <div class="form-group mb-4">
-                            <label for="formGroupExampleInput">Nationality</label>
-                            <select class="form-control  basic">
-                                <option selected="selected">Ghana</option>
-                                <option>Other African Country</option>
-                                <option>International</option>
+                            <label for="formGroupExampleInput">Place of Work</label>
+                            <input required name="placeofwork" type="text" class="form-control" id="formGroupExampleInput" placeholder="Place of Work">
+                        </div>
+                        <div class="form-group mb-4">
+                            <label for="formGroupExampleInput">Branch</label>
+                            <input required name="branch" type="text" class="form-control" id="formGroupExampleInput" placeholder="Branch">
+                        </div>
+                        <div class="form-group mb-4">
+                            <label for="formGroupExampleInput">Gender</label>
+                            <select name="gender" class="form-control" id="formGroupExample  basic">
+                                <option selected="selected">Male</option>
+                                <option>Female</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label for="formGroupExampleInput">Department</label>
+                            <select name="nationality" class="form-control" id="formGroupExample  basic">
+                                <option selected="selected">Computer Science</option>
+                                <option>Business</option>
+                                <option>Nursing</option>
                             </select>
                         </div>
                         <div class="form-group mb-4">
@@ -120,7 +140,7 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
                                 <div class="custom-file-container__image-preview"></div>
                             </div>
                         </div>
-                        <input type="submit" name="time" class="btn btn-primary">
+                        <input name="addgiver" type="submit" name="time" class="btn btn-primary">
                     </form>
 
 
