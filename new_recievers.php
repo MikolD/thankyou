@@ -3,7 +3,7 @@
 session_start();
 include("dbconn.php");
 
-if(isset($_POST[submit]))
+if(isset($_POST['submit']))
   {
   $sql ="INSERT INTO receivers(id,name,gender,workID,placeofWork,email,phone,image,department,branch)
    values('$_POST[id]','$_POST[name]','$_POST[gender]','$_POST[workID]','$_POST[placeofWork]','$_POST[email]','$_POST[phone]','$_POST[image]',$_POST[department]')";
@@ -89,15 +89,21 @@ if(isset($_POST[submit]))
                                             <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
                                         </div>
                                         <div class="form-group mb-4">
-                                            <label for="formGroupExampleInput">Email Address</label>
+              
+                                            <label for="formGroupExampleInput">Gender</label>
+                                            <select class="form-control  basic">
+                                            <option selected="selected">Select Gender</option>
+                                            <option>Male</option>
+                                            <option>Female</option>
+                                          </select>
+                                        </div>
+                                        </div>
+                                        <div class="form-group mb-4">
+                                            <label for="formGroupExampleInput">WorkID</label>
                                             <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
                                         </div>
                                         <div class="form-group mb-4">
-                                            <label for="formGroupExampleInput">Phone Number</label>
-                                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
-                                        </div>
-                                        <div class="form-group mb-4">
-                                            <label for="formGroupExampleInput">Password</label>
+                                            <label for="formGroupExampleInput">Place of Work</label>
                                             <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
                                         </div>
                                         <div class="form-group mb-4">
@@ -118,7 +124,16 @@ if(isset($_POST[submit]))
                                             <span class="custom-file-container__custom-file__custom-file-control"></span>
                                         </label>
                                         <div class="custom-file-container__image-preview"></div>
-                                    </div>                                       </div>
+                                    </div>                                       
+                                  </div>
+                                  <div class="form-group mb-4">
+                                            <label for="formGroupExampleInput">Place of Work</label>
+                                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+                                        </div>
+                                        <div class="form-group mb-4">
+                                            <label for="formGroupExampleInput">Place of Work</label>
+                                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+                                        </div>
                                         <input type="submit" name="time" class="btn btn-primary">
                                     </form>
 
