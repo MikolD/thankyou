@@ -11,7 +11,7 @@ if (isset($_POST["addgiver"])) {
     $error = mysqli_query($con, $addgiverquery);
     if ($error) {
         echo "<script>alert('reciever record inserted successfully...');</script>";
-        echo "<script>window.location.href(\"/\");</script>";
+        echo "\n<script>window.location.redirect(\"/index.php\");</script>";
     } else {
         echo "<script>alert(\"" .   $error  . "\")</script>";
          echo "<script>alert(\"" .   mysqli_error($con)  . "\")</script>";
