@@ -84,10 +84,10 @@ if (isset($_POST["addgiver"])) {
             <div class="layout-px-spacing">
 
                 <div class="first">
-                    <h2>New Receiver</h2>
+                    <h2>New Giver</h2>
                 </div>
                 <div class="widget-content widget-content-area">
-                    <form method="POST" action="new_recievers.php">
+                    <form method="POST" action="new_giver.php">
                         <div class="form-group mb-4">
                             <label for="formGroupExampleInput">Full Name</label>
                             <input name="fullName" type="text" class="form-control" id="formGroupExampleInput" placeholder="Your Full Name">
@@ -101,6 +101,10 @@ if (isset($_POST["addgiver"])) {
                             <input name="phoneNumber" type="text" class="form-control" id="formGroupExampleInput" placeholder="Your Phone Number">
                         </div>
                         <div class="form-group mb-4">
+                            <label for="formGroupExampleInput">Department</label>
+                            <input required name="department" type="text" class="form-control" id="formGroupExampleInput" placeholder="Department">
+                        </div>
+                        <div class="form-group mb-4">
                             <label for="formGroupExampleInput">Work ID</label>
                             <input required name="workid" type="text" class="form-control" id="formGroupExampleInput" placeholder="Work ID">
                         </div>
@@ -112,6 +116,7 @@ if (isset($_POST["addgiver"])) {
                             <label for="formGroupExampleInput">Branch</label>
                             <input required name="branch" type="text" class="form-control" id="formGroupExampleInput" placeholder="Branch">
                         </div>
+                        
                         <div class="form-group mb-4">
                             <label for="formGroupExampleInput">Gender</label>
                             <select name="gender" class="form-control" id="formGroupExample  basic">

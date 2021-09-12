@@ -101,6 +101,10 @@ if (isset($_POST["addgiver"])) {
                             <input name="phoneNumber" type="text" class="form-control" id="formGroupExampleInput" placeholder="Your Phone Number">
                         </div>
                         <div class="form-group mb-4">
+                            <label for="formGroupExampleInput">Department</label>
+                            <input required name="department" type="text" class="form-control" id="formGroupExampleInput" placeholder="Department">
+                        </div>
+                        <div class="form-group mb-4">
                             <label for="formGroupExampleInput">Work ID</label>
                             <input required name="workid" type="text" class="form-control" id="formGroupExampleInput" placeholder="Work ID">
                         </div>
@@ -112,6 +116,7 @@ if (isset($_POST["addgiver"])) {
                             <label for="formGroupExampleInput">Branch</label>
                             <input required name="branch" type="text" class="form-control" id="formGroupExampleInput" placeholder="Branch">
                         </div>
+                        
                         <div class="form-group mb-4">
                             <label for="formGroupExampleInput">Gender</label>
                             <select name="gender" class="form-control" id="formGroupExample  basic">
@@ -145,7 +150,6 @@ if (isset($_POST["addgiver"])) {
 
 
                 </div>
-
 
             </div>
             <?php include("./includes/footer.php") ?>
