@@ -1,9 +1,9 @@
 <?php
 // if you do not understand what this means, create a file in this working directory of the project called .env, and copy and replace the following with the appropriate variable names
-// dbhost="localhost"
-// dbuser="root"
-// dbpass="1234"
-// dbname="medaase"
+// dbhost=localhost
+// dbuser=root
+// dbpass=1234
+// dbname=medaase
 include("./includes/loadenvfile.php");
 
 
