@@ -100,10 +100,7 @@ if (isset($_POST["addgiver"])) {
                             <label for="formGroupExampleInput">Phone Number</label>
                             <input name="phoneNumber" type="text" class="form-control" id="formGroupExampleInput" placeholder="Your Phone Number">
                         </div>
-                        <div class="form-group mb-4">
-                            <label for="formGroupExampleInput">Department</label>
-                            <input required name="department" type="text" class="form-control" id="formGroupExampleInput" placeholder="Department">
-                        </div>
+                   
                         <div class="form-group mb-4">
                             <label for="formGroupExampleInput">Work ID</label>
                             <input required name="workid" type="text" class="form-control" id="formGroupExampleInput" placeholder="Work ID">
@@ -127,7 +124,7 @@ if (isset($_POST["addgiver"])) {
                         </div>
                         <div class="form-group mb-4">
                             <label for="formGroupExampleInput">Department</label>
-                            <select name="nationality" class="form-control" id="formGroupExample  basic">
+                            <select name="department" class="form-control" id="formGroupExample  basic">
                                 <option selected="selected">Computer Science</option>
                                 <option>Business</option>
                                 <option>Nursing</option>
